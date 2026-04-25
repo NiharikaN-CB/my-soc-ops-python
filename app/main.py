@@ -76,6 +76,6 @@ async def dismiss_modal(request: Request) -> Response:
 
 def run() -> None:
     """Entry point for the application."""
-    import uvicorn
+    from uvicorn import run as run_uvicorn
 
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
+    run_uvicorn("app.main:app", host="0.0.0.0", port=8000, reload=True)
